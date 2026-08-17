@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cristjhon O. Rodriguez — IT Graduate &amp; Aspiring Software Developer</title>
+<meta name="description" content="Portfolio of Cristjhon O. Rodriguez, IT graduate and aspiring software developer. Projects, skills, certificates and resume." />
+
+<!-- Fonts: Space Grotesk (display), Inter (body), JetBrains Mono (code accents) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+
+<!-- ============ LOADING SCREEN ============ -->
+<div id="loading-screen" aria-hidden="true">
+  <div class="loader-terminal">
+    <span class="loader-prompt">$</span>
+    <span id="loader-text"></span><span class="loader-cursor">▍</span>
+  </div>
+</div>
+
+<!-- ============ SCROLL PROGRESS BAR ============ -->
+<div id="scroll-progress" role="presentation"></div>
+
+<!-- ============ CURSOR GLOW (desktop only, decorative) ============ -->
+<div id="cursor-glow" aria-hidden="true"></div>
+
+<!-- ============ SKIP LINK (Accessibility) ============ -->
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<!-- ============ NAVIGATION ============ -->
+<header>
+  <nav class="navbar" id="navbar" aria-label="Primary">
+    <a href="#home" class="nav-logo" aria-label="Cristjhon O. Rodriguez, home">
+      <span class="logo-bracket">&lt;</span>CR<span class="logo-bracket">/&gt;</span>
+    </a>
+
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="#home" class="nav-link active" data-section="home"><span class="nav-index">01</span>home</a></li>
+      <li><a href="#about" class="nav-link" data-section="about"><span class="nav-index">02</span>about</a></li>
+      <li><a href="#skills" class="nav-link" data-section="skills"><span class="nav-index">03</span>skills</a></li>
+      <li><a href="#projects" class="nav-link" data-section="projects"><span class="nav-index">04</span>projects</a></li>
+      <li><a href="#certificates" class="nav-link" data-section="certificates"><span class="nav-index">05</span>certs</a></li>
+      <li><a href="#resume" class="nav-link" data-section="resume"><span class="nav-index">06</span>resume</a></li>
+      <li><a href="#contact" class="nav-link" data-section="contact"><span class="nav-index">07</span>contact</a></li>
+    </ul>
+
+    <button id="theme-toggle" aria-label="Toggle light and dark mode" title="Toggle theme">
+      <i class="fa-solid fa-moon"></i>
+    </button>
+  </nav>
+</header>
+
+<main id="main-content">
+
+  <!-- ============ HOME / HERO ============ -->
+  <section id="home" class="section hero">
+    <div class="bg-grid" aria-hidden="true"></div>
+    <canvas id="particles" aria-hidden="true"></canvas>
+
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <p class="path-label">~/portfolio/home</p>
+
+        <div class="terminal-card hero-terminal">
+          <div class="terminal-titlebar">
+            <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+            <span class="terminal-filename">about-me.js</span>
+          </div>
+          <div class="terminal-body">
+            <p><span class="code-comment">// hello there, welcome</span></p>
+            <p><span class="code-key">const</span> <span class="code-var">developer</span> <span class="code-op">=</span> <span class="code-brace">{</span></p>
+            <p class="indent"><span class="code-prop">name:</span> <span class="code-string">"Cristjhon O. Rodriguez"</span>,</p>
+            <p class="indent"><span class="code-prop">role:</span> <span class="code-string" id="typing-role"></span><span class="typing-cursor">|</span>,</p>
+            <p class="indent"><span class="code-prop">basedIn:</span> <span class="code-string">"Philippines"</span>,</p>
+            <p class="indent"><span class="code-prop">status:</span> <span class="code-string">"open to internships & entry-level roles"</span></p>
+            <p><span class="code-brace">}</span>;</p>
+          </div>
+        </div>
+
+        <h1 class="hero-title">
+          Hello, I'm <span class="gradient-text">Cristjhon</span><br>
+          I build things for the web.
+        </h1>
+        <p class="hero-subtitle">
+          IT Graduate &middot; Aspiring Software Developer &middot; Web Developer &middot; Tech Enthusiast
+        </p>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">
+            <i class="fa-solid fa-diagram-project"></i> View My Work
+          </a>
+          <a href="cristjhon.pdf" class="btn btn-outline" target="_blank" download>
+            <i class="fa-solid fa-download"></i> Download Resume
+          </a>
+          <a href="#contact" class="btn btn-ghost">
+            <i class="fa-solid fa-paper-plane"></i> Contact Me
+          </a>
+        </div>
+
+        <div class="hero-socials" aria-label="Social media links">
+          <a href="https://github.com/cristjhon" target="_blank" rel="noopener" aria-label="GitHub profile"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/cristjhon-rodriguez-8124542a4/" target="_blank" rel="noopener" aria-label="LinkedIn profile"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://www.facebook.com/pogi.ka.jhon/" target="_blank" rel="noopener" aria-label="Facebook profile"><i class="fa-brands fa-facebook"></i></a>
+          <a href="mailto:rodriguezcristjhon3@email.com" aria-label="Send an email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+
+      <div class="hero-photo">
+        <div class="photo-frame">
+          <div class="photo-glow" aria-hidden="true"></div>
+          <img src="me.jpg" alt="Portrait of Cristjhon O. Rodriguez" width="420" height="420" loading="eager"
+               onerror="this.src='https://placehold.co/420x420/10162b/94a3b8?text=Add+Your+Photo'">
+          <span class="status-chip"><span class="status-dot"></span> Available for work</span>
+        </div>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-hint" aria-label="Scroll to About section">
+      <span>scroll</span>
+      <i class="fa-solid fa-chevron-down"></i>
+    </a>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about" class="section">
+    <div class="container">
+      <p class="path-label">~/portfolio/about</p>
+      <h2 class="section-title">About Me</h2>
+      <p class="section-lede">A quick introduction, my background, and what drives me as a developer.</p>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I'm a recent Information Technology graduate who enjoys turning ideas into working software.
+            My path into tech started with curiosity about how websites are put together, and it grew into
+            a genuine interest in building clean, usable, and reliable applications from the ground up.
+          </p>
+          <p>
+            <strong>Career objective:</strong> To secure an entry-level software development position where I can apply the knowledge and skills I gained through my academic studies and on-the-job training (OJT), contribute to meaningful projects, and continue growing professionally under the guidance of an experienced development team.
+          </p>
+          <p>
+            Outside of coursework, I like exploring new frameworks, refining my problem-solving skills through
+            coding challenges, and polishing small side projects &mdash; including the one you're looking at right now.
+          </p>
+
+          <div class="info-card">
+            <div class="info-row"><i class="fa-solid fa-user"></i><span><strong>Name:</strong> Cristjhon O. Rodriguez</span></div>
+            <div class="info-row"><i class="fa-solid fa-cake-candles"></i><span><strong>Age:</strong> 22</span></div>
+            <div class="info-row"><i class="fa-solid fa-location-dot"></i><span><strong>Location:</strong> Philippines</span></div>
+            <div class="info-row"><i class="fa-solid fa-graduation-cap"></i><span><strong>Degree:</strong> BS in Information Technology</span></div>
+            <div class="info-row"><i class="fa-solid fa-building-columns"></i><span><strong>Collage:</strong> Pateros Technological Collage</span></div>
+            <div class="info-row"><i class="fa-solid fa-envelope"></i><span><strong>Email:</strong> cristjhon.rodriguez@email.com</span></div>
+          </div>
+        </div>
+
+        <div class="about-side">
+          <h3 class="what-i-do-title">What I Do</h3>
+          <div class="do-card"><i class="fa-solid fa-code"></i><div><h4>Web Development</h4><p>Building responsive, accessible interfaces with clean, maintainable code.</p></div></div>
+          <div class="do-card"><i class="fa-solid fa-laptop-code"></i><div><h4>Software Development</h4><p>Writing structured, well-documented programs to solve real problems.</p></div></div>
+          <div class="do-card"><i class="fa-solid fa-bolt"></i><div><h4>Electrical</h4><p>Applying fundamental electrical knowledge to assist with wiring, testing, maintenance, and safe work practices</p></div></div>
+          <div class="do-card"><i class="fa-solid fa-network-wired"></i><div><h4>Networking</h4><p>Applying networking fundamentals to configure devices, troubleshoot connectivity issues, and support network operations.</p></div></div>
+          <div class="do-card"><i class="fa-solid fa-puzzle-piece"></i><div><h4>Problem Solving</h4><p>Breaking down complex requirements into clear, workable solutions.</p></div></div>
+        </div>
+      </div>
+
+      <div class="counters-row">
+        <div class="counter-card"><span class="counter" data-target="2">0</span><p>Projects Built</p></div>
+        <div class="counter-card"><span class="counter" data-target="6">0</span><p>Certificates Earned</p></div>
+        <div class="counter-card"><span class="counter" data-target="4">0</span><p>Years Studying IT</p></div>
+        <div class="counter-card"><span class="counter" data-target="100">0</span><p>% Ready to Learn</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section id="skills" class="section">
+    <div class="container">
+      <p class="path-label">~/portfolio/skills</p>
+      <h2 class="section-title">Technical Skills</h2>
+      <p class="section-lede">Languages, frameworks, and tools I use to bring projects to life.</p>
+
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3><i class="fa-solid fa-code"></i> Programming Languages</h3>
+          <div class="skill-bar"><div class="skill-bar-top"><span>Java</span><span>95%</span></div><div class="bar-track"><div class="bar-fill" data-percent="95"></div></div></div>
+          <div class="skill-bar"><div class="skill-bar-top"><span>Javascript</span><span>90%</span></div><div class="bar-track"><div class="bar-fill" data-percent="90"></div></div></div>
+          <div class="skill-bar"><div class="skill-bar-top"><span>Python</span><span>80%</span></div><div class="bar-track"><div class="bar-fill" data-percent="80"></div></div></div>
+          <div class="skill-bar"><div class="skill-bar-top"><span>C++</span><span>70%</span></div><div class="bar-track"><div class="bar-fill" data-percent="70"></div></div></div>
+        </div>
+
+        <div class="skill-category">
+          <h3><i class="fa-solid fa-layer-group"></i> Frameworks &amp; Libraries</h3>
+          <div class="skill-bar"><div class="skill-bar-top"><span>Bootstrap</span><span>70%</span></div><div class="bar-track"><div class="bar-fill" data-percent="85"></div></div></div>
+          <div class="skill-bar"><div class="skill-bar-top"><span>React Vite <em>(learning)</em></span><span>50%</span></div><div class="bar-track"><div class="bar-fill" data-percent="50"></div></div></div>
+
+          <h3 class="mt"><i class="fa-solid fa-database"></i> Database</h3>
+          <div class="skill-bar"><div class="skill-bar-top"><span>MySQL</span><span>70%</span></div><div class="bar-track"><div class="bar-fill" data-percent="78"></div></div></div>
+          <div class="skill-bar"><div class="skill-bar-top"><span>MoggoDB</span><span>50%</span></div><div class="bar-track"><div class="bar-fill" data-percent="78"></div></div></div>
+        </div>
+
+        <div class="skill-category">
+          <h3><i class="fa-solid fa-toolbox"></i> Tools</h3>
+          <div class="tool-chips">
+            <span class="chip"><i class="fa-solid fa-code"></i> VS Code</span>
+            <span class="chip"><i class="fa-brands fa-git-alt"></i> Git</span>
+            <span class="chip"><i class="fa-brands fa-github"></i> GitHub</span>
+            <span class="chip"><i class="fa-brands fa-figma"></i> Figma</span>
+            <span class="chip"><i class="fa-solid fa-server"></i> XAMPP</span>
+            <span class="chip"><i class="fa-solid fa-android"></i> Android Studio</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section id="projects" class="section">
+    <div class="container">
+      <p class="path-label">~/portfolio/projects</p>
+      <h2 class="section-title">Projects</h2>
+      <p class="section-lede">A selection of things I've built while learning and practicing my craft.</p>
+
+      <div class="filter-bar" role="tablist" aria-label="Filter projects by technology">
+        <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+        <button class="filter-btn" data-filter="web" role="tab" aria-selected="false">Web</button>
+        <button class="filter-btn" data-filter="php" role="tab" aria-selected="false">PHP</button>
+        <button class="filter-btn" data-filter="python" role="tab" aria-selected="false">Python</button>
+        <button class="filter-btn" data-filter="java" role="tab" aria-selected="false">Java</button>
+      </div>
+
+      <div class="projects-grid" id="projects-grid">
+
+        <article class="project-card" data-category="web">
+          <div class="project-image">
+            <img src="images/project-portfolio.jpg" alt="Screenshot of the e-portfolio website project" loading="lazy"
+                 onerror="this.src='https://placehold.co/600x400/10162b/4f8dfd?text=E-Portfolio+Website'">
+            <div class="project-overlay">
+              <a href="#" target="_blank" rel="noopener" aria-label="View live demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a href="#" target="_blank" rel="noopener" aria-label="View source on GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>E-Portfolio Website</h3>
+            <p>A responsive personal portfolio with a dark, code-editor inspired design and smooth section navigation.</p>
+            <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+            <div class="project-links">
+              <a href="#" class="btn-sm" target="_blank" rel="noopener"><i class="fa-solid fa-play"></i> Live Demo</a>
+              <a href="#" class="btn-sm btn-sm-outline" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="php">
+          <div class="project-image">
+            <img src="images/project-inventory.jpg" alt="Screenshot of an inventory management system" loading="lazy"
+                 onerror="this.src='https://placehold.co/600x400/10162b/9b6bff?text=Inventory+System'">
+            <div class="project-overlay">
+              <a href="#" target="_blank" rel="noopener" aria-label="View live demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a href="#" target="_blank" rel="noopener" aria-label="View source on GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Inventory Management System</h3>
+            <p>A PHP and MySQL web app for tracking stock levels, suppliers, and generating simple sales reports.</p>
+            <div class="project-tags"><span>PHP</span><span>MySQL</span><span>Bootstrap</span></div>
+            <div class="project-links">
+              <a href="#" class="btn-sm" target="_blank" rel="noopener"><i class="fa-solid fa-play"></i> Live Demo</a>
+              <a href="#" class="btn-sm btn-sm-outline" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="python">
+          <div class="project-image">
+            <img src="images/project-analyzer.jpg" alt="Screenshot of a data analysis tool" loading="lazy"
+                 onerror="this.src='https://placehold.co/600x400/10162b/22d3ee?text=Data+Analyzer'">
+            <div class="project-overlay">
+              <a href="#" target="_blank" rel="noopener" aria-label="View live demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a href="#" target="_blank" rel="noopener" aria-label="View source on GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>CSV Data Analyzer</h3>
+            <p>A Python script that cleans messy CSV data and generates quick summary charts using matplotlib.</p>
+            <div class="project-tags"><span>Python</span><span>Pandas</span><span>Matplotlib</span></div>
+            <div class="project-links">
+              <a href="#" class="btn-sm" target="_blank" rel="noopener"><i class="fa-solid fa-play"></i> Live Demo</a>
+              <a href="#" class="btn-sm btn-sm-outline" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="java">
+          <div class="project-image">
+            <img src="images/project-library.jpg" alt="Screenshot of a library management desktop app" loading="lazy"
+                 onerror="this.src='https://placehold.co/600x400/10162b/4f8dfd?text=Library+System'">
+            <div class="project-overlay">
+              <a href="#" target="_blank" rel="noopener" aria-label="View live demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a href="#" target="_blank" rel="noopener" aria-label="View source on GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Library Management System</h3>
+            <p>A desktop application built in Java with a MySQL backend for managing book loans and returns.</p>
+            <div class="project-tags"><span>Java</span><span>MySQL</span><span>Swing</span></div>
+            <div class="project-links">
+              <a href="#" class="btn-sm" target="_blank" rel="noopener"><i class="fa-solid fa-play"></i> Live Demo</a>
+              <a href="#" class="btn-sm btn-sm-outline" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="web">
+          <div class="project-image">
+            <img src="images/project-taskapp.jpg" alt="Screenshot of a task management web app" loading="lazy"
+                 onerror="this.src='https://placehold.co/600x400/10162b/9b6bff?text=Task+Manager'">
+            <div class="project-overlay">
+              <a href="#" target="_blank" rel="noopener" aria-label="View live demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a href="#" target="_blank" rel="noopener" aria-label="View source on GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Task Manager Web App</h3>
+            <p>A drag-and-drop task board built with vanilla JavaScript and local storage persistence.</p>
+            <div class="project-tags"><span>JavaScript</span><span>CSS Grid</span><span>LocalStorage</span></div>
+            <div class="project-links">
+              <a href="#" class="btn-sm" target="_blank" rel="noopener"><i class="fa-solid fa-play"></i> Live Demo</a>
+              <a href="#" class="btn-sm btn-sm-outline" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="python">
+          <div class="project-image">
+            <img src="images/project-chatbot.jpg" alt="Screenshot of a simple chatbot interface" loading="lazy"
+                 onerror="this.src='https://placehold.co/600x400/10162b/22d3ee?text=Simple+Chatbot'">
+            <div class="project-overlay">
+              <a href="#" target="_blank" rel="noopener" aria-label="View live demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a href="#" target="_blank" rel="noopener" aria-label="View source on GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Rule-Based Chatbot</h3>
+            <p>A simple Python chatbot that answers FAQs using pattern matching, built as a class project.</p>
+            <div class="project-tags"><span>Python</span><span>Flask</span></div>
+            <div class="project-links">
+              <a href="#" class="btn-sm" target="_blank" rel="noopener"><i class="fa-solid fa-play"></i> Live Demo</a>
+              <a href="#" class="btn-sm btn-sm-outline" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CERTIFICATES ============ -->
+  <section id="certificates" class="section">
+    <div class="container">
+      <p class="path-label">~/portfolio/certificates</p>
+      <h2 class="section-title">Certificates</h2>
+      <p class="section-lede">Courses and certifications I've completed to sharpen my skills.</p>
+
+      <div class="filter-bar" role="tablist" aria-label="Filter certificates by issuer">
+        <button class="cert-filter-btn active" data-filter="all">All</button>
+        <button class="cert-filter-btn" data-filter="coursera">Coursera</button>
+        <button class="cert-filter-btn" data-filter="udemy">Udemy</button>
+        <button class="cert-filter-btn" data-filter="freecodecamp">freeCodeCamp</button>
+      </div>
+
+      <div class="certs-grid" id="certs-grid">
+        <div class="cert-card" data-filter="coursera">
+          <img src="certificates/cert-webdev.jpg" alt="Web Development certificate thumbnail" loading="lazy"
+               onerror="this.src='https://placehold.co/400x280/10162b/4f8dfd?text=Certificate'">
+          <div class="cert-info">
+            <h4>Responsive Web Design</h4>
+            <p>freeCodeCamp &middot; 2025</p>
+            <button class="btn-sm view-cert" data-img="certificates/cert-webdev.jpg" data-title="Responsive Web Design">
+              <i class="fa-solid fa-eye"></i> View Certificate
+            </button>
+          </div>
+        </div>
+
+        <div class="cert-card" data-filter="freecodecamp">
+          <img src="certificates/cert-js.jpg" alt="JavaScript algorithms certificate thumbnail" loading="lazy"
+               onerror="this.src='https://placehold.co/400x280/10162b/9b6bff?text=Certificate'">
+          <div class="cert-info">
+            <h4>JavaScript Algorithms &amp; Data Structures</h4>
+            <p>freeCodeCamp &middot; 2025</p>
+            <button class="btn-sm view-cert" data-img="certificates/cert-js.jpg" data-title="JavaScript Algorithms & Data Structures">
+              <i class="fa-solid fa-eye"></i> View Certificate
+            </button>
+          </div>
+        </div>
+
+        <div class="cert-card" data-filter="coursera">
+          <img src="certificates/cert-database.jpg" alt="Database design certificate thumbnail" loading="lazy"
+               onerror="this.src='https://placehold.co/400x280/10162b/22d3ee?text=Certificate'">
+          <div class="cert-info">
+            <h4>Database Design &amp; MySQL</h4>
+            <p>Coursera &middot; 2024</p>
+            <button class="btn-sm view-cert" data-img="certificates/cert-database.jpg" data-title="Database Design & MySQL">
+              <i class="fa-solid fa-eye"></i> View Certificate
+            </button>
+          </div>
+        </div>
+
+        <div class="cert-card" data-filter="udemy">
+          <img src="certificates/cert-python.jpg" alt="Python programming certificate thumbnail" loading="lazy"
+               onerror="this.src='https://placehold.co/400x280/10162b/4f8dfd?text=Certificate'">
+          <div class="cert-info">
+            <h4>Python for Everybody</h4>
+            <p>Udemy &middot; 2024</p>
+            <button class="btn-sm view-cert" data-img="certificates/cert-python.jpg" data-title="Python for Everybody">
+              <i class="fa-solid fa-eye"></i> View Certificate
+            </button>
+          </div>
+        </div>
+
+        <div class="cert-card" data-filter="coursera">
+          <img src="certificates/cert-uiux.jpg" alt="UI UX design fundamentals certificate thumbnail" loading="lazy"
+               onerror="this.src='https://placehold.co/400x280/10162b/9b6bff?text=Certificate'">
+          <div class="cert-info">
+            <h4>UI/UX Design Fundamentals</h4>
+            <p>Coursera &middot; 2024</p>
+            <button class="btn-sm view-cert" data-img="certificates/cert-uiux.jpg" data-title="UI/UX Design Fundamentals">
+              <i class="fa-solid fa-eye"></i> View Certificate
+            </button>
+          </div>
+        </div>
+
+        <div class="cert-card" data-filter="udemy">
+          <img src="certificates/cert-git.jpg" alt="Git and GitHub certificate thumbnail" loading="lazy"
+               onerror="this.src='https://placehold.co/400x280/10162b/22d3ee?text=Certificate'">
+          <div class="cert-info">
+            <h4>Git &amp; GitHub for Beginners</h4>
+            <p>Udemy &middot; 2023</p>
+            <button class="btn-sm view-cert" data-img="certificates/cert-git.jpg" data-title="Git & GitHub for Beginners">
+              <i class="fa-solid fa-eye"></i> View Certificate
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificate modal preview -->
+  <div class="modal" id="cert-modal" role="dialog" aria-modal="true" aria-labelledby="cert-modal-title" hidden>
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-content">
+      <button class="modal-close" data-close-modal aria-label="Close certificate preview"><i class="fa-solid fa-xmark"></i></button>
+      <img id="modal-img" src="" alt="">
+      <h3 id="cert-modal-title"></h3>
+    </div>
+  </div>
+
+  <!-- ============ RESUME ============ -->
+  <section id="resume" class="section">
+    <div class="container">
+      <p class="path-label">~/portfolio/resume</p>
+      <h2 class="section-title">Resume</h2>
+      <p class="section-lede">A summary of my education, skills, and experience &mdash; or grab the full PDF.</p>
+
+      <div class="resume-summary">
+        <p>
+          Detail-oriented IT graduate with hands-on experience building web applications, working with relational
+          databases, and collaborating on small team projects. Comfortable across the stack from responsive
+          front-end interfaces to PHP/MySQL back ends, with a growing interest in software engineering practices
+          like version control and clean code.
+        </p>
+      </div>
+
+      <div class="resume-columns">
+        <div class="timeline">
+          <h3><i class="fa-solid fa-graduation-cap"></i> Education</h3>
+          <div class="timeline-item">
+            <span class="timeline-dot"></span>
+            <div class="timeline-body">
+              <h4>BS in Information Technology</h4>
+              <p class="timeline-meta">Your University Name &middot; 2022 &ndash; 2026</p>
+              <p>Focused on web development, database systems, and software engineering fundamentals.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-dot"></span>
+            <div class="timeline-body">
+              <h4>Senior High School, STEM/ICT Strand</h4>
+              <p class="timeline-meta">Your School Name &middot; 2020 &ndash; 2022</p>
+              <p>Built a foundation in programming logic and computer systems.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <h3><i class="fa-solid fa-briefcase"></i> Experience</h3>
+          <div class="timeline-item">
+            <span class="timeline-dot"></span>
+            <div class="timeline-body">
+              <h4>IT Intern</h4>
+              <p class="timeline-meta">Company Name &middot; Jun 2025 &ndash; Aug 2025</p>
+              <p>Assisted in maintaining internal web tools and fixing front-end bugs under senior developer guidance.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-dot"></span>
+            <div class="timeline-body">
+              <h4>Freelance Web Developer</h4>
+              <p class="timeline-meta">Self-employed &middot; 2024 &ndash; Present</p>
+              <p>Built small business websites for local clients using HTML, CSS, and PHP.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="resume-achievements">
+        <h3><i class="fa-solid fa-award"></i> Achievements</h3>
+        <ul>
+          <li>Dean's Lister, 3 consecutive semesters</li>
+          <li>2nd Place, University Web Development Hackathon 2025</li>
+          <li>Completed 6+ professional certifications in web and software development</li>
+        </ul>
+      </div>
+
+      <div class="resume-cta">
+        <a href="resume/Cristjhon_Rodriguez_Resume.pdf" class="btn btn-primary" download>
+          <i class="fa-solid fa-download"></i> Download Full Resume (PDF)
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="section">
+    <div class="container">
+      <p class="path-label">~/portfolio/contact</p>
+      <h2 class="section-title">Get In Touch</h2>
+      <p class="section-lede">Have an opportunity or just want to say hi? My inbox is open.</p>
+
+      <div class="contact-grid">
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required autocomplete="name" />
+            <span class="form-error" id="name-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required autocomplete="email" />
+            <span class="form-error" id="email-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required />
+            <span class="form-error" id="subject-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <span class="form-error" id="message-error"></span>
+          </div>
+          <button type="submit" class="btn btn-primary full-width">
+            <i class="fa-solid fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+
+        <div class="contact-info">
+          <div class="contact-info-card">
+            <i class="fa-solid fa-envelope"></i>
+            <div><h4>Email</h4><p>rodriguezcristjhon3@gmail.com</p></div>
+          </div>
+          <div class="contact-info-card">
+            <i class="fa-solid fa-phone"></i>
+            <div><h4>Phone</h4><p>+63 942 212 5157</p></div>
+          </div>
+          <div class="contact-info-card">
+            <i class="fa-brands fa-github"></i>
+            <div><h4>GitHub</h4><p>github.com/cristjhon</p></div>
+          </div>
+          <div class="contact-info-card">
+            <i class="fa-brands fa-linkedin"></i>
+            <div><h4>LinkedIn</h4><p>linkedin.com/in/cristjhon-rodriguez-8124542a4</p></div>
+          </div>
+
+          <div class="map-embed">
+            <iframe
+              title="General location map"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=121.055%2C14.523%2C121.066%2C14.531&layer=mapnik&marker=14.52737%2C121.06047"
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <a href="#home" class="nav-logo"><span class="logo-bracket">&lt;</span>CR<span class="logo-bracket">/&gt;</span></a>
+      <p>Built line by line, section by section.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <a href="#home">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#resume">Resume</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="footer-socials">
+      <h4>Elsewhere</h4>
+      <div>
+        <a href="https://github.com/cristjhon" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/cristjhon-rodriguez-8124542a4/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://www.facebook.com/pogi.ka.jhon/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; <span id="year"></span> Cristjhon O. Rodriguez. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- ============ BACK TO TOP ============ -->
+<button id="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<!-- ============ TOAST ============ -->
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
